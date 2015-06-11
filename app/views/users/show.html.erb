@@ -1,2 +1,18 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% provide(:title, @user.email) %>
+
+<% if logged_in? %>
+	<div class="container">
+		<section class="album_form">
+			<%= render 'shared/album_form' %>
+		</section>
+	</div>
+<% end %>
+
+
+<div class="container">
+	<% if @user.albums.any? %>
+		<ul class="albums">
+			<%= render @albums %>
+		</ul>
+	<% end %>
+</div>

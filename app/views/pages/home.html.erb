@@ -2,3 +2,11 @@
 
 <div class = "container home_page"> 
 </div>
+
+<div class="container">
+	<% if @user.albums.any? %>
+		<ul class="albums">
+			<%= render @albums %>
+		</ul>
+	<% end %>
+</div>

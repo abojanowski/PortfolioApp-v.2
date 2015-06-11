@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+	has_many :albums
 	attr_accessor :remember_token
 	validates :email, presence: true, uniqueness: { case_senstitive: false }
 	has_secure_password

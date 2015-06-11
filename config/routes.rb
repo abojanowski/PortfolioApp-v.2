@@ -10,4 +10,5 @@ post   'login'     => 'sessions#create'
 delete 'logout'    => 'sessions#destroy'
 
 resources :users
+resources :albums, 	only: [:create, :destroy]
 end
