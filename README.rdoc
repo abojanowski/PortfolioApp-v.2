@@ -1,0 +1,9 @@
+rails version: 4.2.1
+
+# Portfolio it's my trial application. Now in progress .. 
+
+My aim is to create few functions:
+
+* log in/out
+* upload images
+* show images
