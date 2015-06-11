@@ -1,0 +1,121 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+
+
+
+body {
+	padding-top: 60px;
+}
+
+.container {
+	padding: 0px;
+}
+
+section {
+	overflow: 1uto;
+}
+
+.center {
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+line-height: 1;
+text-align: center;
+}
+
+h1 {
+font-size: 3em;
+letter-spacing: -2px;
+margin-bottom: 30px;
+text-align: center;
+}
+
+label {
+	margin-top: 10px;
+}
+
+/* header */
+
+#sign {
+	float: left;
+	margin-left: 10px;
+	padding-top: 5px;
+	font-size: 2.0em;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#sign:hover {
+	color: #B8B8B8;
+	text-decoration: none; 
+}
+
+.navbar-nav {
+	font-size: 1.5em;;
+	font-weight: bold;
+	margin: 3px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-left {
+	margin-left: 30px;
+}
+
+/* footer */
+
+footer {
+	border-top: 1px solid #C8C8C8;
+	padding-top: 5px;
+	margin-top: 50px; 
+}
+
+/* home */
+
+.home_page {
+	height: 400px;
+	background-image: url('https://dl-web.dropbox.com/get/Public/bab.jpg?_subject_uid=394325576&w=AABKA4W6JbEuX_aqqJP05Wu6qwYh1-RbT_ZeRvg28TNh2Q');
+	background-position: center;
+	margin-top: 2px;
+}
+
+/* log in */
+
+.btn-primary {
+	margin-top: 15px;
+	margin-bottom: 30px;
+} 
+
+/* albums */
+
+.create_album {
+	margin-top: 50px;
+	.field {
+		margin-bottom: 10px;
+	}
+	.btn-primary {
+		margin-top: 30px;
+	}
+}
+
+.albums {
+	list-style-type: none;	
+	text-align: center;
+	margin: 0px;
+	padding-left: 0px;
+	.title {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.5em;
+		border-bottom: 1px solid #E0E0E0;
+		padding-top: 50px;
+	}
+}
+
+
+#album_title {
+	width: 100%;
+}

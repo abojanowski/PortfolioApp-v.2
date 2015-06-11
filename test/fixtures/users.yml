@@ -1,0 +1,3 @@
+ania:
+ email: anna@korzen.com
+ password_digest: <%= User.digest("example") %>
