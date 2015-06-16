@@ -4,6 +4,10 @@ rails version: 4.2.1
 
 App is visible on: https://tranquil-tundra-9928.herokuapp.com/
 
+Log in:
+email: example@example.com
+password: example
+
 My aim is to create few functions:
 
 * log in/out
