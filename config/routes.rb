@@ -1,14 +1,21 @@
 Rails.application.routes.draw do
 
-root               'pages#home'
+  get 'works/create'
 
-get 'about'     => 'pages#about'
-get 'contact'   => 'pages#contact'
+  get 'works/destroy'
 
-get    'login'     => 'sessions#new'
-post   'login'     => 'sessions#create'
-delete 'logout'    => 'sessions#destroy'
+	root              			  'pages#home'
 
-resources :users
-resources :albums, 	only: [:create, :destroy]
+	get 'about'    				 => 'pages#about'
+	get 'contact'   			 => 'pages#contact'
+
+	get    'login'    		 => 'sessions#new'
+	post   'login'    		 => 'sessions#create'
+	delete 'logout'   		 => 'sessions#destroy'
+
+	resources :users
+	resources :albums, 		 only: [:show, :create, :destroy] do
+		resources :works,  	 only: [:create]
+	end
+	resources :works, 		 only: [:destroy]
 end

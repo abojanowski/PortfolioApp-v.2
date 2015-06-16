@@ -4,9 +4,11 @@ rails version: 4.2.1
 
 App is visible on: https://tranquil-tundra-9928.herokuapp.com/
 
-
 My aim is to create few functions:
 
 * log in/out
 * upload images
 * show images
+* show error messages
+
+

@@ -1,8 +1,10 @@
 class Album < ActiveRecord::Base
   belongs_to 			:user
+  has_many        :works
   validates 			:title, presence: true
   mount_uploader 	:picture, PictureUploader
   validate 				:picture_size
+  validates       :picture, presence: true
 
   private
 

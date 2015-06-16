@@ -106,15 +106,28 @@ footer {
 	list-style-type: none;	
 	text-align: center;
 	margin: 0px;
-	padding-left: 0px;
+	padding-left: 0px;	
+}
+.album_box{
 	.title {
 		font-family: 'Montserrat', sans-serif;
 		font-size: 1.5em;
+		text-decoration: none;
 		border-bottom: 1px solid #E0E0E0;
 		padding-top: 50px;
 	}
+	a {
+		color: #A8A8A8;
+	}
+	a:hover{
+		color: #383838;
+		text-decoration: none;
+	} 
 }
 
+.delete_album {
+	color: #fff;
+}
 
 #album_title {
 	width: 100%;
