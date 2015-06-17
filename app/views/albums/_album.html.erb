@@ -1,6 +1,6 @@
-<li>
+<li class="album_box">
 		<%= link_to(album) do %>
-			<p class="title"><%= album.title %></p>
-			<%= image_tag album.picture.url if album.picture? %>
+			<p class="title_box"><%= album.title %></p>
+			<img src="<%= album.picture.url if album.picture? %>" >
 		<% end %>		
 </li>

@@ -1,9 +1,14 @@
 <%= form_for(@album, html: { multipart: true }) do |f| %>
+
 <div class="field">
+	<p class="title_field">Add New Album</p>
 	<%= f.text_area :title, placeholder: "Add title..." %>
 </div>
 <span class="picture">
-	<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+	
+	<p id="picture_add" style="cursor:pointer" >
+		<img src="/Outbox_128.png" id="upfile1" style="cursor:pointer" />Add image ...</p>
+	<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: "add_file" %>
 </span>
 	<%= f.submit "Create", class: "btn btn-primary" %>
 <% end %>
@@ -15,4 +20,10 @@
 			alert('Please choose a smaller file than 5MB.');
 		}
 	});
+</script>
+
+<script type="text/javascript">
+	$("#picture_add").click(function () {
+    $("#album_picture").trigger('click');
+});
 </script>

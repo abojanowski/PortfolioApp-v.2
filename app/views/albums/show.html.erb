@@ -1,16 +1,26 @@
-<% if current_user?(@work.album.user) %>
-	<%= form_for([@album, @work], html: { multipart: true }) do |f| %>
-		<span class="picture">
-			<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-		</span>
-		<%= f.submit "Create", class: "btn btn-primary" %>
-	<% end %>
-<% end %>
+<div class="container">
 
-<% @works.each do |work| %>
-	<img src="<%= work.picture.url  if work.picture? %>">
-	<% if current_user?(work.album.user) %>
-		<%= link_to "delete", work_path(work), method: :delete, 
-																			 		 data: { confirm: "You sure?"}%>
-	<% end %>																		 								  
-<% end %> 	
+	<% if current_user?(@work.album.user) %>
+		<div class="album_form">
+			<%= form_for([@album, @work], html: { multipart: true }) do |f| %>
+				<p class="title_field">Add New Image</p>
+
+				<span class="picture">
+					<p id="picture_add" style="cursor:pointer" >
+						<img src="/Outbox_128.png" id="upfile1" style="cursor:pointer" />Add image ...</p>
+						<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: "add_file" %>
+				</span>
+				<%= f.submit "Create", class: "btn btn-primary" %>
+			<% end %>
+		</div>	
+	<% end %>
+
+	<% @works.each do |work| %>
+		<img src="<%= work.picture.url  if work.picture? %>">
+		<% if current_user?(work.album.user) %>
+			<%= link_to "Delete Image", work_path(work), method: :delete, 
+																				 		 			 data: { confirm: "You sure?"},
+																				 		 			 class: "work_delete btn btn-primary"	%>
+		<% end %>																		 								  
+	<% end %> 	
+</div>

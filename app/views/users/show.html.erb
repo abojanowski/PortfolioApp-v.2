@@ -14,15 +14,15 @@
 			<% @albums.each do |album| %>
 				<li class="album_box">
 					<%= link_to(album) do %>
-						<p class="title"><%= album.title %></p>
+						<p class="title_box"><%= album.title %></p>
 						<img src="<%= album.picture.url  if album.picture? %>">
 					<% end %>
 				</li>
 
 				<% if current_user?(album.user) %>	
-					<p class="delete_album"><%= link_to "delete", album, method: :delete, 
-																		 													 data: { confirm: "You sure?" }, 
-																		 													 class: "btn btn-primary"			 %>
+					<p class="delete_album"><%= link_to "Delete Album", album, method: :delete, 
+																		 																 data: { confirm: "You sure?" }, 
+																		 																 class: "btn btn-primary"			 %>
 					</p>																 
 				<% end %>
 				
